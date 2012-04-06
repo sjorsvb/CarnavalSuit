@@ -9,17 +9,17 @@ for (pinNumber = 2; pinNumber < 11; pinNumber ++)
 {
   pinMode(pinNumber, OUTPUT);  
 }
-
-digitalWrite(10,HIGH);
+//Show that the shield is connected
+digitalWrite(STATUS,HIGH);
 }
 void loop()
 {
   EL.off(pin);
 pin++;
-if(pin > 4) pin = 0;
+if(pin > EL_C) pin = EL_A;
 //digitalWrite(pin, HIGH);
 //digitalWrite(3, HIGH);
-EL.fade_in(pin);
+EL.pulse(pin);
 
-
+delay(1000);
 }
