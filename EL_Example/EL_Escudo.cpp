@@ -28,7 +28,7 @@
 void EL_EscudoClass::on(char channel)
 {
 	pinMode(channel, OUTPUT);
-	digitalWrite(channel, LOW); 
+	digitalWrite(channel, HIGH); 
 }
 
 void EL_EscudoClass::off(char channel)
